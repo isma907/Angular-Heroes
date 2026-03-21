@@ -1,0 +1,23 @@
+.hero-list-paginator {
+    position: fixed;
+    bottom: 20px;
+    background: #ffe600;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    left: 10px;
+    right: 10px;
+    margin: auto;
+}
+
+@media(max-width:1129px) {
+    .hero-list-paginator {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+    }
+}

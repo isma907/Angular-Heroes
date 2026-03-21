@@ -1,27 +1,55 @@
-# MindataHeroes
+# 🦸‍♂️ Heroes App: API & Angular Frontend
 
-Preview:
-https://isma907.github.io/mindata-heroes/
+This project is a full-stack solution for managing heroes, featuring a Node.js API and an Angular frontend.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+## 🌐 Live Demo
+Check out the live application here:  
+https://isma907.github.io/Angular-Heroes/
 
-## Installation
+---
 
-run `npm install`
+## 🚀 Getting Started
 
-run `npm start`
+To get the project running on your local machine, please follow these steps in order:
 
-Switch to `NGRX branch` to see the NGRX Version
+### 1. Backend Setup (API)
+First, you must clone the API repository and follow the specific setup instructions provided in its own documentation:
 
-## e2e Testing Cypress
+👉 https://github.com/isma907/NodeJs-API
 
-run `npm start`
+> **Note:** Ensure the API server is fully installed and running before proceeding to the next step.
 
-run `npm run e2e`
+---
 
+### 2. Frontend Setup (Current Repository)
+Once the API is ready, set up this repository by running the following commands:
 
-## Credentials
+1. **Clone this repository:**
 
-username: mindata
+```bash
+   git clone https://github.com/isma907/Angular-Heroes.git
+   cd Angular-Heroes
+```
 
-password: mindata
+3. **Install dependencies:**
+```bash
+   npm install
+```
+
+3. **Start the application:**
+
+```bash
+   npm start
+```
+
+## 🛠️ Prerequisites
+
+* Node.js: Ensure you have an LTS version installed.
+* Connectivity: Make sure the backend server is active to allow CRUD (Create, Read, Update, Delete) operations from this frontend.
+
+## 📝 Additional Notes
+* For development, it is recommended to use nodemon to automatically restart the server on file changes.
+* If you change the default API port, remember to update the configuration in your Angular environment files.
+
+---
+Built with ❤️ by [isma907](https://github.com/isma907)
