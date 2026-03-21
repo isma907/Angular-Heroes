@@ -8,22 +8,13 @@
     box-shadow: 0px 2px 9px -4px #000;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 
     &-left {
-        flex: 3;
         display: flex;
         align-items: center;
         gap: 20px;
-    }
-
-    &-right {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        justify-content: end;
-        padding-right: 20px;
     }
 
     &-form {

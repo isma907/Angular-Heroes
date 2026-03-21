@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Hero } from '../../interfaces/hero.interface';
+import { environment } from '../../environments/environment';
 
 interface pagination {
   page: number;
@@ -14,9 +15,10 @@ interface pagination {
 
 export class HeroesService {
   http = inject(HttpClient)
+  private readonly baseUrl = environment.BASE_URL;
 
   getHeroes(pagination: pagination) {
-    const url = `http://localhost:4000/superheroes/characters?page=${pagination.page}&limit=${pagination.limit}&query=${pagination.query}`;
+    const url = `${this.baseUrl}/superheroes/characters?page=${pagination.page}&limit=${pagination.limit}&query=${pagination.query}`;
     return this.http.get<{ data: Hero[], totalItems: number, totalPages: number }>(url);
   }
 }
