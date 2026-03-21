@@ -1,0 +1,7 @@
+<div class="hero-list-wrapper">
+    <section class="hero-list-wrapper-grid">
+        @for (hero of appStore.heroes(); track hero._id) {
+        <app-hero-card [hero]="hero" class="hero-list-item"></app-hero-card>
+        }
+    </section>
+</div>
