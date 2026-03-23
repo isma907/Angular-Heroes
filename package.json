@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github-build": "ng build --configuration production --base-href 'https://isma907.github.io/Angular-Heroes/'",
+    "github-build": "ng build --configuration production --base-href https://isma907.github.io/Angular-Heroes/",
     "github-deploy": "npx angular-cli-ghpages --dir=dist/angular-heroes/browser --no-silent"
   },
   "prettier": {
