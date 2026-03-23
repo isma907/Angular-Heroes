@@ -2,7 +2,7 @@
     <form class="app-header-form">
         <mat-form-field class="search-form-field" appearance="outline">
             <mat-label>Search</mat-label>
-            <input matInput placeholder="Search" [formControl]="searchControl">
+            <input matInput placeholder="Search" [formControl]="searchControl" [disabled]="appStore.loading()">
 
             @if (searchControl.value) {
             <button matSuffix mat-icon-button aria-label="Clear" (click)="appStore.resetFilters()">

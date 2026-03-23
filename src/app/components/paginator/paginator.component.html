@@ -1,5 +1,5 @@
 <mat-paginator class="hero-list-paginator" 
 [length]="appStore.filter().totalItems" 
 [pageSize]="appStore.filter().limit"
-(page)="myChanges($event)" [pageSizeOptions]="[]">
+(page)="myChanges($event)" [pageSizeOptions]="[]" [disabled]="appStore.loading()">
 </mat-paginator>
