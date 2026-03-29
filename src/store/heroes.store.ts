@@ -39,7 +39,14 @@ export const HeroStore = signalStore(
       });
     },
 
-    changedFilters(filter: Partial<HeroState['filter']>) {
+
+    changedQuery(filter: Partial<HeroState['filter']>) {
+      patchState(store, (state) => ({
+        filter: { ...state.filter, ...filter, page: 1 },
+      }));
+    },
+
+    changedPage(filter: Partial<HeroState['filter']>) {
       patchState(store, (state) => ({
         filter: { ...state.filter, ...filter },
       }));

@@ -7,16 +7,34 @@
     &-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-        grid-gap: 20px;
         padding: 20px;
         align-items: stretch;
+        grid-gap: 20px;
+
+        >* {
+            width: 100%;
+            aspect-ratio: 3/4;
+        }
     }
 
     .hero-list-item {
-        ::ng-deep .mdc-card__media {
-            max-height: 270px;
-            object-fit: cover;
-            width: 100%;
+        ::ng-deep {
+            .mat-mdc-card-title {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .mat-mdc-card-header-text {
+                overflow: hidden
+            }
+
+            .mdc-card__media {
+                object-fit: cover;
+                width: 100%;
+            }
+
+            .mat-mdc-card-title {}
         }
     }
 
@@ -53,7 +71,7 @@
 
 @media(max-width:1129px) {
     .hero-list-wrapper {
-        width: 100%;
+        width: 90%;
 
         .hero-list-paginator {
             width: 100%;

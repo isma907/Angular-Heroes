@@ -3,14 +3,14 @@
     <fieldset [disabled]="appStore.loading()">
       <mat-form-field class="search-form-field" appearance="outline">
         <mat-label>Search</mat-label>
-        <input matInput placeholder="Search" [formControl]="searchControl" />
+        <input matInput placeholder="Search" (input)="onInput($event)" [value]="query()">
 
-        @if (searchControl.value) {
-          <button matSuffix mat-icon-button aria-label="Clear" (click)="appStore.resetFilters()">
-            <mat-icon>
-              <span class="material-symbols-outlined"> close </span>
-            </mat-icon>
-          </button>
+        @if (query()) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="appStore.resetFilters()">
+          <mat-icon>
+            <span class="material-symbols-outlined"> close </span>
+          </mat-icon>
+        </button>
         }
       </mat-form-field>
     </fieldset>

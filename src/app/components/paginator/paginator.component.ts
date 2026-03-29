@@ -11,8 +11,8 @@ import { HeroStore } from '../../../store/heroes.store';
 export class PaginatorComponent {
   appStore = inject(HeroStore);
 
-  myChanges(event: any) {
-    this.appStore.changedFilters({ page: event.pageIndex + 1, limit: event.pageSize })
+  pageChange(event: any) {
+    this.appStore.changedPage({ page: event.pageIndex + 1, limit: event.pageSize })
     this.appStore.loadHeroes();
 
   }
